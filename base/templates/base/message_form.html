@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <br>
+        <label for="message">Edit your message here: </label>
+        {{ form.as_p }}
+        <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+{% endblock content %}
